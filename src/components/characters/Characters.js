@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './Characters.css';
+import Map from './../Map';
 
 export default class Characters extends Component {
     constructor(){
@@ -13,19 +13,19 @@ export default class Characters extends Component {
 
     componentDidMount(){
         axios.get("/api/characters").then((response) => {
-            console.log('res: ', response);
-            this.setState({characters: response.data.results})
-        }
-            
-        )
-    }
+            this.setState({characters: response.data.results})}    
+        )}
+
+    addToFavorites = (image,name) => {
+        axios.post("/api/favorites", {image, name})
+    } 
+    
+    
 
   render() {
-    <Map characterArray={this.state.characters}/>
-
     return (
-      <div className="characters">
-        {characters}
+      <div>
+        <Map characterArray={this.state.characters} addToFavorites={this.addToFavorites}/>
       </div>
     );
   }

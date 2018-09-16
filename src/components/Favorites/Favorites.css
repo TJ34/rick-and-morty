@@ -1,0 +1,51 @@
+.favCharacters {
+    display: inline-flex;
+    width: 100vw;
+    flex-wrap: wrap;
+    height: 80vh;
+}
+
+.favNamePic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+}
+
+.favImage {
+    height: 200px;
+    width: 200px;
+}
+
+.favButton-Name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.charName {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 40px;
+    width: 150px;
+}
+
+.deleteButton {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: blue;
+    color: white;
+}
+
+.deleteButton:active {
+    background-color: red;
+}
+

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Characters from './components/characters/Characters';
+import Favorites from './components/Favorites/Favorites';
 
 class App extends Component {
   constructor(){
@@ -18,7 +19,7 @@ class App extends Component {
         <Characters />
         </div>
     } else if (toggle === "favorites"){
-      return <div>hello</div>
+      return <Favorites />
     }
   }
 
@@ -31,7 +32,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <div className="App">
         <header className="App-header">

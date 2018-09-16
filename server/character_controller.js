@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-characters = [];
+favorites = [];
 id = 0;
 
 const getCharacters = (req,res) => {
@@ -14,4 +14,36 @@ const getCharacters = (req,res) => {
 
 module.exports = {
     getCharacters,
+
+    addToFavorites(req, res){
+        const {image, name} = req.body;
+        let comment = " ";
+        favorites.push({id, name, image, comment});
+        id++;
+        res.status(200).send(favorites);
+    },
+    favoriteArr(req,res){
+        res.status(200).send(favorites);
+    },
+    deleteFavorite(req,res){
+        const deleteID = req.params.id;
+        let characterIndex=favorites.findIndex(character=>character.id == deleteID);
+        favorites.splice(characterIndex,1);
+        res.status(200).send(favorites);
+    },
+    updateComment(req,res){
+        const{text} = req.body;
+        console.log(text)
+        const commentID = req.params.id;
+        const commentIndex = favorites.findIndex(character=>character.id == commentID);
+        let comment = favorites[commentIndex];
+
+        favorites[commentIndex] = {
+            id: comment.id,
+            name: comment.name,
+            image: comment.image,
+            comment: text || comment.comment
+        };
+        res.status(200).send(favorites);
+    }
 }
