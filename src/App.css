@@ -3,11 +3,12 @@
 }
 
 .navButtons {
-  height: 30px;
+  height: 7vh;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   background-color: #ABADAC;
+  border-bottom: 30px solid #00B0CB;
 }
 
 .button {

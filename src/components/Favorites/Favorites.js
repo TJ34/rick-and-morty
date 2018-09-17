@@ -52,7 +52,9 @@ export default class Favorites extends Component {
                                    onChange={this.inputChange}
                                    className="inputBox"
                             />
-                            <button onClick={() => this.updateComment(character.id, this.state.userInput)}>Submit</button>
+                            <button onClick={() => this.updateComment(character.id, this.state.userInput)}
+                                    className="submitButton"
+                            >Submit</button>
                         </div>
                         <div className="commentBox">Comment: 
                             <div className="comment">{character.comment}</div>

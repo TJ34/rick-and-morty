@@ -42,7 +42,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="navButtons">
-        <button onClick={this.toggleQuote} className="button">Quotes</button>
+        <button onClick={this.toggleQuote} className="button">Quotes/Episodes</button>
         <button onClick={this.toggleCharacter} className="button">Characters</button>
         <button onClick={this.toggleFavorites} className="button">Favorites</button>
         </div>

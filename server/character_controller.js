@@ -1,12 +1,25 @@
 const axios = require('axios');
 
 favorites = [];
+episodes = []
 id = 0;
 
 const getCharacters = (req,res) => {
     axios.get('https://rickandmortyapi.com/api/character').then((response) => {
         res.status(200).json(response.data);
     });
+}
+
+const getEpisodes = (req, res) => {
+    axios.get('https://rickandmortyapi.com/api/episode').then((response) => {
+        res.status(200).json(response.data)
+    })
+}
+
+const getEpisodes2 = (req,res) => {
+    axios.get('https://rickandmortyapi.com/api/episode?page=2').then((response) => {
+        res.status(200).json(response.data)
+    })
 }
 
 const getQuotes = (req, res) => {
@@ -17,8 +30,9 @@ const getQuotes = (req, res) => {
 
 module.exports = {
     getCharacters,
-
     getQuotes,
+    getEpisodes,
+    getEpisodes2,
 
     addToFavorites(req, res){
         const {image, name} = req.body;
@@ -38,7 +52,6 @@ module.exports = {
     },
     updateComment(req,res){
         const{text} = req.body;
-        console.log(text)
         const commentID = req.params.id;
         const commentIndex = favorites.findIndex(character=>character.id == commentID);
         let comment = favorites[commentIndex];
