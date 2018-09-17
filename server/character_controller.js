@@ -10,7 +10,7 @@ const getCharacters = (req,res) => {
 }
 
 const getQuotes = (req, res) => {
-    axios.get('http://loremricksum.com/api').then((response) => {
+    axios.get('http://loremricksum.com/api/?paragraphs=1&quotes=1').then((response) => {
         res.status(200).send(response.data);
     })
 }

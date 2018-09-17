@@ -14,11 +14,12 @@
     width: 350px;
     margin: 10px auto;
     background-color: #3A3839;
+    border-radius: 15px;
 }
 
 .favImage {
     height: 200px;
-    width: 200px;
+    width: 225px;
 }
 
 .favButton-Name {
@@ -39,6 +40,7 @@
     width: 150px;
     color: white;
     font-family: 'Acme';
+    font-size: 20px
 }
 
 .deleteButton {
@@ -51,10 +53,17 @@
 
 .deleteButton:active {
     background-color: red;
+    cursor: grabbing;
 }
 
 .deleteButton:hover {
     background-color: #00AFC7;
+    cursor: pointer;
+}
+
+.inputBox {
+    margin: 5px;
+    
 }
 
 .commentBox {
@@ -62,7 +71,12 @@
     width: 200px;
     margin: 5px;
     border: 2px solid white;
-    color: white;
+    border-radius: 5px;
+    color: #ABADAC;
     text-align: left;
     font-family: 'Acme';
+}
+
+.comment {
+    color: white;
 }

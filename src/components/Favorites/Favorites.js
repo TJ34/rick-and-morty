@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './Favorites.css';
+import Footer from '../Footer/Footer';
 
 export default class Favorites extends Component {
     constructor(){
@@ -49,16 +50,20 @@ export default class Favorites extends Component {
                         <div>
                             <input placeholder="Wubba Lubba Dub Dub"
                                    onChange={this.inputChange}
+                                   className="inputBox"
                             />
                             <button onClick={() => this.updateComment(character.id, this.state.userInput)}>Submit</button>
                         </div>
-                        <div className="commentBox">Comment: {character.comment}</div>
+                        <div className="commentBox">Comment: 
+                            <div className="comment">{character.comment}</div>
+                        </div>
                     </div>
                </div>
       })
     return (
       <div className="favCharacters">
         {favoritesDisplay}
+        <Footer />
       </div>
     );
   }

@@ -1,10 +1,30 @@
 .quotePage {
-    height: 50vh;
+    height: 60vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: #00B0CB;
+}
+
+.quoteButton {
+    height: 60px;
+    width: 100px;
+    margin: 50px;
+    border: 7px solid #0D6E83;
+    border-radius: 10px;
+    font-family: 'Acme';
+    font-size: 15px;
+}
+
+.quoteButton:hover {
+    cursor: grab;
+    background-color: #9C9990;
+}
+
+.quoteButton:active {
+    cursor: grabbing;
+    background-color: #878787;
 }
 
 .speech-bubble {
@@ -19,6 +39,8 @@
     align-items: center;
     font-size: 20px;
     padding: 0 20px;
+    font-family: 'Gloria Hallelujah', sans-serif;
+    line-height: 27px;
 }
 
 .speech-bubble:after {

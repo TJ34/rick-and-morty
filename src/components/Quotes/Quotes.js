@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './Quotes.css';
+import Footer from '../Footer/Footer';
 
 export default class Quotes extends Component {
     constructor(){
@@ -24,12 +25,15 @@ export default class Quotes extends Component {
   render() {
       console.log(this.state);
     return (
-      <div className="quotePage">
-        <button onClick={() => this.getQuote()}>Get Quote</button>
-        <div className="speech-bubble">
-            <div>"{this.state.quotes.data}"</div>
+        <div>
+          <div className="quotePage">
+            <button onClick={() => this.getQuote()} className="quoteButton">Quote Me</button>
+            <div className="speech-bubble">
+                <div>"{this.state.quotes.data}"</div>
+            </div>
+          </div>
+          <Footer />
         </div>
-      </div>
     );
   }
 }
