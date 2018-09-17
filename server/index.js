@@ -11,7 +11,8 @@ app.get("/api/characters", cc.getCharacters);
 app.post("/api/favorites", cc.addToFavorites);
 app.get("/api/favorites", cc.favoriteArr);
 app.delete("/api/favorites/:id", cc.deleteFavorite);
-app.put("/api/favorites/:id", cc.updateComment)
+app.put("/api/favorites/:id", cc.updateComment);
+app.get("/api/quotes", cc.getQuotes);
 
 
 app.listen(port, () =>

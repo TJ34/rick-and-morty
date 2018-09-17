@@ -1,0 +1,37 @@
+.quotePage {
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #00B0CB;
+}
+
+.speech-bubble {
+	position: relative;
+	background: #F7F9F9;
+    border-radius: .4em;
+    height: 200px;
+    width: 300px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding: 0 20px;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 37px solid transparent;
+	border-top-color: #F7F9F9;;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -18.5px;
+	margin-bottom: -37px;
+}

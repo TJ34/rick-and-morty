@@ -1,8 +1,11 @@
+.charPage {
+    background-color: #00B0CB;
+}
+
 .characters {
     display: inline-flex;
     width: 100vw;
     flex-wrap: wrap;
-    height: 80vh;
     margin: auto;
 }
 
@@ -14,12 +17,13 @@
     height: 300px;
     width: 300px;
     margin: 10px auto;
-    background-color: black;
+    background-color: #3A3839;
 }
 
 .image {
     height: 200px;
     width: 200px;
+    margin: 5px;
 }
 
 .buttonName {
@@ -38,18 +42,26 @@
     height: 40px;
     width: 150px;
     color: white;
+    font-family: 'Acme';
+    font-size: 20px;
 }
 
 .favoriteButton {
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    background-color: blue;
+    background-color:#ABADAC;
     color: white;
 }
 
 .favoriteButton:active {
     background-color: lightskyblue;
+    cursor: grabbing;
+}
+
+.favoriteButton:hover {
+    background-color: #00AFC7;
+    cursor: grab;
 }
 
 

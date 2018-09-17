@@ -1,10 +1,7 @@
 .header {
     background-image: url("https://m.media-amazon.com/images/M/MV5BMTU2NTcxMTI5M15BMl5BanBnXkFtZTgwNTc1NTQyMTE@._V1_SX1777_CR0,0,1777,651_AL_.jpgg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: contain;
-    height: 390px;
-    width: 100vw;
-    color: aliceblue;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
 }
 

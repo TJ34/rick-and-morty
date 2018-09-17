@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Map from './../Map';
+import Footer from '../Footer/Footer';
 
 export default class Characters extends Component {
     constructor(){
@@ -24,8 +25,9 @@ export default class Characters extends Component {
 
   render() {
     return (
-      <div>
+      <div className="charPage">
         <Map characterArray={this.state.characters} addToFavorites={this.addToFavorites}/>
+        <Footer />
       </div>
     );
   }

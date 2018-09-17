@@ -52,7 +52,7 @@ export default class Favorites extends Component {
                             />
                             <button onClick={() => this.updateComment(character.id, this.state.userInput)}>Submit</button>
                         </div>
-                        <div>Comment: {character.comment}</div>
+                        <div className="commentBox">Comment: {character.comment}</div>
                     </div>
                </div>
       })

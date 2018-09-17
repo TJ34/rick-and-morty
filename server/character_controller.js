@@ -5,15 +5,20 @@ id = 0;
 
 const getCharacters = (req,res) => {
     axios.get('https://rickandmortyapi.com/api/character').then((response) => {
-        console.log('res: ', response);
         res.status(200).json(response.data);
-});
+    });
 }
 
-
+const getQuotes = (req, res) => {
+    axios.get('http://loremricksum.com/api').then((response) => {
+        res.status(200).send(response.data);
+    })
+}
 
 module.exports = {
     getCharacters,
+
+    getQuotes,
 
     addToFavorites(req, res){
         const {image, name} = req.body;
